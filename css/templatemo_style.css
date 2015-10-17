@@ -92,7 +92,7 @@ h1 {
 #templatemo_banner_menu ul li a.current
 {
     background-position: 0 0px ;
-    background-color: #830300;
+    background-color: #00111B;
     color: #ffffff;
 }
 #templatemo_banner_menu #mobile_menu {
@@ -143,15 +143,19 @@ h1 {
     font-size: 16px;
 }
 .templatemo_banner_slide_01 {
-    background: url('../images/templatemo_banner_slide_01.jpg');
+    background: url('../images/banner-01.jpg');
     background-size: cover;
 }
 .templatemo_banner_slide_02 {
-    background: url('../images/templatemo_banner_slide_02.jpg');
+    background: url('../images/banner-02.jpg');
     background-size: cover;
 }
 .templatemo_banner_slide_03 {
-    background: url('../images/templatemo_banner_slide_03.jpg');
+    background: url('../images/banner-03.jpg');
+    background-size: cover;
+}
+.templatemo_banner_slide_04 {
+    background: url('../images/banner-04.jpg');
     background-size: cover;
 }
 /*about our organization*/

@@ -1,15 +1,45 @@
+<?php
+if(isset($_POST['submit']))
+{
+    if( !$_POST['name'] || !$_POST['email'] || !$_POST['subject'] || !$_POST['message'] || $_POST['name'] == '' || $_POST['email'] == ''|| $_POST['message'] == '')
+    {
+        $error = 'Please fill in all the required fields';
+    }
+    else 
+    {
+            $recMailOn = "info@blackthorium.com";
+            $name = esc_html($_POST['name']);
+            $email = esc_html($_POST['email']);
+            $comment = esc_html($_POST['message']);
+            $msg = "Name: " . $name . PHP_EOL;
+            $msg .= "Email Address: " . $email . PHP_EOL;
+            $msg .= "Message: " . $comment;
+
+            $sitename = "Black Thorium";
+            $subject = '[' . $sitename . ']' . $_POST['subject'];
+            $headers = 'From: ' . $name . ' <' . $email . '>' . PHP_EOL;
+            //wp_mail($to, $subject, $msg, $headers);*/
+
+            // the message
+            $msg = "First line of text\nSecond line of text";
+
+            // send email
+            mail($recMailOn,$subject,$msg);
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dragonfruit - Free HTML5 Templates</title>
-    <meta name="description" content="Dragonfruit is one of the free HTML5 Templates from templatemo. It is a parallax layout with jQuery slider, events, and timeline." />
+    <title>BlackThorium - The Tech Solutions You are Looking For</title>
+    <meta name="description" content="BlackThorium - The Tech Solutions You are Looking For" />
     <!-- templatemo 411 dragonfruit -->
-    <meta name="author" content="templatemo">
+    <meta name="author" content="blackthorium">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="./favicon.png" />		
+    <link rel="shortcut icon" href="./favicon.ico" />		
     <!-- Font Awesome -->
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <!-- Bootstrap -->
@@ -30,20 +60,26 @@
     <ul>
         <li class="templatemo_banner_slide_01">
             <div class="slide_caption">
-                <h1>Responsive Design</h1>
-                <p>Aenean diam libero, venenatis eu risus eu, tincidunt porttitor orci. Nulla consequat mi et lectus vehicula condimentum. Nulla ullamcorper dolor vehicula dolor interdum, eget fermentum ligula bibendum.</p>
+                <h1>Creative Team</h1>
+                <p>We are creative team with ideas your business needs. We develop with experience and current trends your business needs.</p>
             </div>
         </li>
         <li class="templatemo_banner_slide_02">
             <div class="slide_caption">
-                <h1>Free HTML5 Template</h1>
-                <p>Dragonfruit is one of free HTML5 <a rel="nofollow" href="http://www.templatemo.com">website templates</a> from templatemo. Donec quam neque, porta at pellentesque at, imperdiet ut velit. Pellentesque luctus ac nunc et hendrerit. Aliquam eu scelerisque eros. Vestibulum scelerisque mi nec augue condimentum rhoncus.</p>
+                <h1>Time is Money</h1>
+                <p>We value your time as well as your money. We focus on professional quality work but keep the timelines right in control.</p>
             </div>
         </li>
         <li class="templatemo_banner_slide_03">
             <div class="slide_caption">
-                <h1>Mobile Ready</h1>
-                <p>Cras fermentum convallis elementum. Praesent sit amet auctor erat, vitae auctor dolor. Sed viverra nunc magna, quis placerat augue pellentesque quis. Sed nec pellentesque dolor. Aenean in lectus enim. Phasellus eu egestas libero. Vivamus ultrices ligula a dapibus lobortis.</p>
+                <h1>Right Tools</h1>
+                <p>We use the right tools for the right task.</p>
+            </div>
+        </li>
+        <li class="templatemo_banner_slide_04">
+            <div class="slide_caption">
+                <h1>Make Reality</h1>
+                <p>Having a new idea for an app, we are here to make it reality.</p>
             </div>
         </li>
     </ul>
@@ -53,7 +89,7 @@
         <ul class="nav nav-pills nav-stacked">
             <li><a href="#templatemo_banner_slide"><i class="glyphicon glyphicon-home"></i> &nbsp; Home</a></li>
             <li><a href="#templatemo_about"><i class="glyphicon glyphicon-briefcase"></i> &nbsp; About</a></li>
-            <li><a href="#templatemo_events"><i class="glyphicon glyphicon-bullhorn"></i> &nbsp; Latest Projects</a></li>
+            <li><a href="#templatemo_events"><i class="glyphicon glyphicon-bullhorn"></i> &nbsp; Projects</a></li>
             <li><a href="#templatemo_timeline"><i class="glyphicon glyphicon-calendar"></i> &nbsp; Methodology</a></li>
             <li><a href="#templatemo_contact"><i class="glyphicon glyphicon-phone-alt"></i> &nbsp; Contact</a></li>
         </ul>
@@ -70,7 +106,7 @@
                 <ul class="nav nav-justified">
                     <li><a href="#templatemo_banner_slide">Home</a></li>
                     <li><a href="#templatemo_about">About</a></li>
-                    <li><a href="#templatemo_events"> Projects</a></li>
+                    <li><a href="#templatemo_events">Projects</a></li>
                     <li><a href="#templatemo_timeline">Methodology</a></li>
                     <li><a href="#templatemo_contact">Contact</a></li>
                  </ul>
@@ -122,24 +158,24 @@
         <div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0">
             <div class="event_box_wap event_animate_left">
                 <div class="event_box_img">
-                    <img src="images/templatemo_event_01.jpg" class="img-responsive" alt="Web Design Trends" />
+                    <img src="images/projects-01.jpg" class="img-responsive" alt="Web Design Trends" />
                 </div>
                 <div class="event_box_caption">
-                    <h1>Web Design Trends</h1>
-                    <p><span class="glyphicon glyphicon-map-marker"></span> New Hotel, Bangkok, Thailand &nbsp;&nbsp; <span class="glyphicon glyphicon-time"></span> 4:00 PM to 8:00 PM</p>
-                    <p>Quisque feugiat dapibus lectus ut consectetur. Donec et ante vitae leo cursus hendrerit vitae ac mauris. Suspendisse dictum pretium urna quis rutrum. Nullam tincidunt dolor ut leo malesuada, eget volutpat turpis porttitor.</p>
+                    <h1>Executive Enterprises</h1>
+                    <p>Branding and Print Designs</p>
+                    <p>We gave the Brand Design to Executive Enterprises. The print media was covered including Visiting Cards, Invoice and Letter Head.</p>
                 </div>
             </div>
         </div>
         <div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0">
             <div class="event_box_wap event_animate_right">
                 <div class="event_box_img">
-                    <img src="images/templatemo_event_02.jpg" class="img-responsive" alt="Free Bootstrap Seminar" />
+                    <img src="images/projects-02.jpg" class="img-responsive" alt="Free Bootstrap Seminar" />
                 </div>
                 <div class="event_box_caption">
-                    <h1>Free Bootstrap Seminar</h1>
-                    <p><span class="glyphicon glyphicon-map-marker"></span> Digital Hall, Yangon, Myanmar &nbsp;&nbsp; <span class="glyphicon glyphicon-time"></span> 10:30 AM to 3:30 PM </p>
-                    <p>Vestibulum dapibus dolor porttitor urna pretium euismod. Aliquam lobortis enim at lacinia mollis. Curabitur eget sem eros. Duis pulvinar rhoncus lectus, ac hendrerit enim pharetra et.</p>
+                    <h1>OAK Technologies</h1>
+                    <p>Design &amp; Development of website</p>
+                    <p>We delivered the designed and onwards developed the complete website of OAK Technologies</p>
                 </div>
             </div>
         </div>
@@ -147,24 +183,24 @@
         <div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0">
             <div class="event_box_wap event_animate_left">
                 <div class="event_box_img">
-                    <img src="images/templatemo_event_03.jpg" class="img-responsive" alt="" />
+                    <img src="images/projects-03.jpg" class="img-responsive" alt="" />
                 </div>
                 <div class="event_box_caption">
-                    <h1>Mobile Designs</h1>
-                    <p><span class="glyphicon glyphicon-map-marker"></span> Old Town Center, Mandalay, Myanmar &nbsp;&nbsp; <span class="glyphicon glyphicon-time"></span> 3:30 PM to 6:30 PM </p>
-                    <p>Etiam ac ante gravida, pellentesque odio non, facilisis dui. Suspendisse vestibulum justo quis sapien sodales, in pellentesque erat congue.</p>
+                    <h1>Hyat &amp; Meerjees</h1>
+                    <p>Design &amp; Development of Website</p>
+                    <p>HYAT &amp; MEERJEES is a vibrant firm of lawyers, providing legal services since 1981; supported by a capable administrative staff and state-of-the-art offices in prime locations.</p>
                 </div>
             </div>
         </div>
         <div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0">
             <div class="event_box_wap event_animate_right">
                 <div class="event_box_img">
-                    <img src="images/templatemo_event_04.jpg" class="img-responsive" alt="" />
+                    <img src="images/projects-04.jpg" class="img-responsive" alt="" />
                 </div>
                 <div class="event_box_caption">
-                    <h1>Happy Startups</h1>
-                    <p><span class="glyphicon glyphicon-map-marker"></span> New Hat, Lashio, Myanmar &nbsp;&nbsp; <span class="glyphicon glyphicon-time"></span> 2:15 PM to 5:15 PM </p>
-                    <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc rutrum urna eget augue placerat sodales. Mauris ut dapibus nisi, eget fringilla lectus.</p>
+                    <h1>Clean Tech</h1>
+                    <p>Design &amp; Development of Clean Tech website.</p>
+                    <p>The Global Cleantech Innovation Programme (GCIP), currently running in 6 countries, including Pakistan, is a three year programme that aims at developing a sustainable entrepreneurship ecosystem, while supporting clean technology innovations in SMEs and startup enterpreneurs to maximize their opportunities to achieve sustainable commercial success.</p>
                 </div>
             </div>
         </div>
@@ -177,26 +213,21 @@
             <div class="time_line_caption">1</div>
             <div class="time_line_paragraph">
                 <h1>Requirements analysis</h1>
-                <p>Aliquam adipiscing nibh sem, vitae aliquet ipsum rutrum nec. Nulla nec fermentum libero. Duis quis fermentum libero. Nunc facilisis ultrices fringilla. Nullam sed ligula ac libero venenatis pellentesque vitae nec mauris.</p>
+                <p>We initiate every project with requirement analysis. We take this step seriously and give ample time to set the direction towards the right path.</p>
             </div>
         </div>
         <div class="time_line_wap">
             <div class="time_line_caption">2</div>
             <div class="time_line_paragraph">
-                <h1>Software design</h1>
-                <p>Vestibulum pellentesque leo mi, non adipiscing odio tristique in. Aliquam suscipit magna nisi, non dapibus purus cursus in. Sed vitae quam bibendum mauris vehicula pretium. Curabitur ac ornare magna. Vestibulum dapibus dolor porttitor urna pretium euismod. Aliquam lobortis enim at lacinia mollis.</p>
+                <h1>Planning &amp; Designing</h1>
+                <p>Once the requirments are clear we being the planning and software designing phase. With detailed requimentments and thorough planning we aim for professional and stable outcome. During designing we keep room for future enhancements to accomodate the future needs of your businees. Timelines are also set in this phase so you know when things will be ready to production.</p>
             </div>
         </div>
         <div class="time_line_wap">
             <div class="time_line_caption">3</div>
             <div class="time_line_paragraph">
-                <h1>Implementation</h1>
-                <p>
-                       <span class="glyphicon glyphicon-user"></span> <a href="#">Cooker</a> &nbsp;&nbsp;
-                       <span class="glyphicon glyphicon-bookmark"></span> <a href="#">Web Design</a>, <a href="#">CSS3</a> &nbsp;&nbsp;
-                       <span class="glyphicon glyphicon-edit"></span> <a href="#">3 comments</a>
-                </p>
-                <p>Fusce feugiat sem dolor. Curabitur a consectetur quam. Maecenas ut purus rutrum, bibendum eros eu, suscipit diam. Praesent semper bibendum gravida. Praesent eget leo ac arcu aliquet pellentesque sit amet at tortor. Cras sagittis nec tellus nec imperdiet.</p>
+                <h1>Development</h1>
+                <p>We follow divide and conqure rule. The tasks are well divided into smaller and simpler chunks which helps the team members to work independently knowing the other parts will just work.</p>
             </div>
         </div>
         <div class="time_line_wap">
@@ -204,19 +235,14 @@
             <div class="time_line_paragraph">
                 <h1>Testing</h1>
                
-                <p>Ut varius nibh adipiscing sagittis lobortis. Sed imperdiet risus enim, sit amet tempus nisi lobortis a. Etiam in gravida leo, non interdum sapien. Sed mi odio, pharetra at tellus ac, adipiscing pulvinar dolor. Nulla quis suscipit urna. Integer congue non nunc a luctus.</p>
+                <p>We test our products on three levels. The first phase is developer level testing, which is task level testing then Q/A team assures the define funtionality is working and tries to break with corner cases. Once different modules are integrated we go for full application level testing, which leaves very little room for any bugs to pass on production environment.</p>
             </div>
         </div>
         <div class="time_line_wap">
             <div class="time_line_caption">5</div>
             <div class="time_line_paragraph">
-                <h1>Integration</h1>
-                <p>
-                       <span class="glyphicon glyphicon-user"></span> <a href="#">John West</a> &nbsp;&nbsp;
-                       <span class="glyphicon glyphicon-bookmark"></span> <a href="#">3D Effect</a>, <a href="#">CSS3</a> &nbsp;&nbsp;
-                       <span class="glyphicon glyphicon-edit"></span> <a href="#">4 comments</a>
-                </p>
-                <p>Maecenas in ipsum pulvinar, dapibus leo ut, adipiscing neque. Phasellus tincidunt arcu eleifend placerat posuere. Nullam nec eros in leo facilisis blandit id in neque. Proin varius, neque in eleifend porta, neque arcu dapibus risus, vel congue ante nibh varius nisi.</p>
+                <h1>Demo</h1>
+                <p>Client's satisfaction is our number one priority. Once we are satisfied by our internal testing we go for demo on beta servers. The clients' feedback are well acknoledged and by any chance there is any need for change, we do it while staying with in the terms and condition finalized in earlier phases.</p>
             </div>
         </div>
         <div class="time_line_wap">
@@ -224,7 +250,7 @@
             <div class="time_line_paragraph">
                 <h1>Deployment</h1>
               
-                <p>Duis lacinia leo erat, eu tincidunt mauris congue ut. Ut auctor turpis a sapien commodo, ac ultrices dui vehicula. Etiam in tristique felis. Sed eleifend turpis sed purus venenatis fringilla. <br><br> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse vel sollicitudin eros, vel vulputate leo.</p>
+                <p>Once the client is satisfied with the output, we move the code to production environment where the target audience could use the final product.</p>
             </div>
         </div>
            <div class="time_line_wap">
@@ -232,7 +258,7 @@
             <div class="time_line_paragraph">
                 <h1>Maintenance</h1>
                 
-                <p>Duis lacinia leo erat, eu tincidunt mauris congue ut. Ut auctor turpis a sapien commodo, ac ultrices dui vehicula. Etiam in tristique felis. Sed eleifend turpis sed purus venenatis fringilla. <br><br> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse vel sollicitudin eros, vel vulputate leo.</p>
+                <p>For on going project we go for Service Level Agreements and provide on going support.</p>
             </div>
         </div>
     </div>
@@ -250,7 +276,6 @@
             <br>
             <p>
                 <strong>Email:</strong> info@BlackThorium.com<br />
-                <strong>Phone:</strong> 010-020-0340<br />
                 <strong>Website:</strong> www.BlackThorium.com<br />
                 <strong>Address:</strong> #8, Third floor, Ahmed Center, I-8 Markaz, Islamabad 44000, Pakistan</p>
             <ul class="list-inline social-link">
@@ -271,27 +296,28 @@
                 </li>
            </ul>
         </div>
-        <form action="#" method="post" class="col-md-8">
+        <form method="post" class="col-md-8">
             <div class="row">
                 <div class="col-md-12">
                 <h2>Send Enquiry</h2>
                 </div>
                 <div class="col-md-6">
                     <p>Name</p>
-                    <input type="text" name="name" id="name" placeholder="Your Name" />
+                    <input type="text" name="name" id="name" placeholder="Your Name" required/>
                 </div>
                 <div class="col-md-6">
                     <p>Email</p>
-                    <input type="text" name="email" id="email" placeholder="Your Email" />
+                    <input type="email" name="email" id="email" placeholder="Your Email" required/>
                 </div>
                 <div class="col-md-12">
                     <p>Subject</p>
-                    <input type="text" name="subject" id="subject" placeholder="Subject" />
+                    <input type="text" name="subject" id="subject" placeholder="Subject" required/>
                 </div>
                 <div class="col-md-12">
                     <p>Message</p>
-                    <textarea name="message" id="message"  placeholder="Write your message here..."></textarea>
+                    <textarea name="message" id="message"  placeholder="Write your message here..." required></textarea>
                 </div>
+                <input type="hidden" name="submit" value="1" />
                 <div class="col-xs-6 col-sm-3 col-md-offset-6">
                     <button type="submit">Send</button>
                 </div>
