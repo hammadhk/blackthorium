@@ -70,7 +70,7 @@
                 <ul class="nav nav-justified">
                     <li><a href="#templatemo_banner_slide">Home</a></li>
                     <li><a href="#templatemo_about">About</a></li>
-                    <li><a href="#templatemo_events">Latest Projects</a></li>
+                    <li><a href="#templatemo_events"> Projects</a></li>
                     <li><a href="#templatemo_timeline">Methodology</a></li>
                     <li><a href="#templatemo_contact">Contact</a></li>
                  </ul>
@@ -174,33 +174,23 @@
     <h1>Development Methodology</h1>
     <div class="container-fluid">
         <div class="time_line_wap">
-            <div class="time_line_caption">10 days ago</div>
+            <div class="time_line_caption">1</div>
             <div class="time_line_paragraph">
-                <h1>Lorem ipsum dolor sit amet</h1>
-                <p>
-                       <span class="glyphicon glyphicon-user"></span> <a href="#">George</a> &nbsp;&nbsp;
-                       <span class="glyphicon glyphicon-bookmark"></span> <a href="#">Web Design</a>, <a href="#">Responsive</a> &nbsp;&nbsp;
-                       <span class="glyphicon glyphicon-edit"></span> <a href="#">3 comments</a>
-                </p>
+                <h1>Requirements analysis</h1>
                 <p>Aliquam adipiscing nibh sem, vitae aliquet ipsum rutrum nec. Nulla nec fermentum libero. Duis quis fermentum libero. Nunc facilisis ultrices fringilla. Nullam sed ligula ac libero venenatis pellentesque vitae nec mauris.</p>
             </div>
         </div>
         <div class="time_line_wap">
-            <div class="time_line_caption">2 weeks ago</div>
+            <div class="time_line_caption">2</div>
             <div class="time_line_paragraph">
-                <h1>Excepteur sint occaecat cupidatat</h1>
-                <p>
-                       <span class="glyphicon glyphicon-user"></span> <a href="#">Kyor Kyor</a> &nbsp;&nbsp;
-                       <span class="glyphicon glyphicon-bookmark"></span> <a href="#">HTML5</a>, <a href="#">Mobile</a> &nbsp;&nbsp;
-                       <span class="glyphicon glyphicon-edit"></span> <a href="#">2 comments</a>
-                </p>
+                <h1>Software design</h1>
                 <p>Vestibulum pellentesque leo mi, non adipiscing odio tristique in. Aliquam suscipit magna nisi, non dapibus purus cursus in. Sed vitae quam bibendum mauris vehicula pretium. Curabitur ac ornare magna. Vestibulum dapibus dolor porttitor urna pretium euismod. Aliquam lobortis enim at lacinia mollis.</p>
             </div>
         </div>
         <div class="time_line_wap">
-            <div class="time_line_caption">one month ago</div>
+            <div class="time_line_caption">3</div>
             <div class="time_line_paragraph">
-                <h1>Doloremque laudantium</h1>
+                <h1>Implementation</h1>
                 <p>
                        <span class="glyphicon glyphicon-user"></span> <a href="#">Cooker</a> &nbsp;&nbsp;
                        <span class="glyphicon glyphicon-bookmark"></span> <a href="#">Web Design</a>, <a href="#">CSS3</a> &nbsp;&nbsp;
@@ -210,21 +200,17 @@
             </div>
         </div>
         <div class="time_line_wap">
-            <div class="time_line_caption">15 May 2084</div>
+            <div class="time_line_caption">4</div>
             <div class="time_line_paragraph">
-                <h1>Neque porro quisquam</h1>
-                <p>
-                       <span class="glyphicon glyphicon-user"></span> <a href="#">Brain</a> &nbsp;&nbsp;
-                       <span class="glyphicon glyphicon-bookmark"></span> <a href="#">HTML5</a>, <a href="#">Animation</a> &nbsp;&nbsp;
-                       <span class="glyphicon glyphicon-edit"></span> <a href="#">6 comments</a>
-                </p>
+                <h1>Testing</h1>
+               
                 <p>Ut varius nibh adipiscing sagittis lobortis. Sed imperdiet risus enim, sit amet tempus nisi lobortis a. Etiam in gravida leo, non interdum sapien. Sed mi odio, pharetra at tellus ac, adipiscing pulvinar dolor. Nulla quis suscipit urna. Integer congue non nunc a luctus.</p>
             </div>
         </div>
         <div class="time_line_wap">
-            <div class="time_line_caption">20 April 2084</div>
+            <div class="time_line_caption">5</div>
             <div class="time_line_paragraph">
-                <h1>Sed do eiusmod tempor</h1>
+                <h1>Integration</h1>
                 <p>
                        <span class="glyphicon glyphicon-user"></span> <a href="#">John West</a> &nbsp;&nbsp;
                        <span class="glyphicon glyphicon-bookmark"></span> <a href="#">3D Effect</a>, <a href="#">CSS3</a> &nbsp;&nbsp;
@@ -234,18 +220,23 @@
             </div>
         </div>
         <div class="time_line_wap">
-            <div class="time_line_caption">5 April 2084</div>
+            <div class="time_line_caption">6</div>
             <div class="time_line_paragraph">
-                <h1>Ut enim ad minim veniam</h1>
-                <p>
-                       <span class="glyphicon glyphicon-user"></span> <a href="#">Moon Plus</a> &nbsp;&nbsp;
-                       <span class="glyphicon glyphicon-bookmark"></span> <a href="#">Web Design</a>, <a href="#">Responsive</a> &nbsp;&nbsp;
-                       <span class="glyphicon glyphicon-edit"></span> <a href="#">5 comments</a>
-                </p>
+                <h1>Deployment</h1>
+              
+                <p>Duis lacinia leo erat, eu tincidunt mauris congue ut. Ut auctor turpis a sapien commodo, ac ultrices dui vehicula. Etiam in tristique felis. Sed eleifend turpis sed purus venenatis fringilla. <br><br> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse vel sollicitudin eros, vel vulputate leo.</p>
+            </div>
+        </div>
+           <div class="time_line_wap">
+            <div class="time_line_caption">7</div>
+            <div class="time_line_paragraph">
+                <h1>Maintenance</h1>
+                
                 <p>Duis lacinia leo erat, eu tincidunt mauris congue ut. Ut auctor turpis a sapien commodo, ac ultrices dui vehicula. Etiam in tristique felis. Sed eleifend turpis sed purus venenatis fringilla. <br><br> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse vel sollicitudin eros, vel vulputate leo.</p>
             </div>
         </div>
     </div>
+
 </div>
 <div id="templatemo_contact" class="container_wapper">
     <div class="container-fluid">
