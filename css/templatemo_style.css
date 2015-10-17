@@ -49,7 +49,7 @@ h1 {
 }
 #templatemo_mobile_menu ul li a {
     text-align: left;
-    background: #f15556;
+    background: #830300;
     color: #000;
 }
 #templatemo_mobile_menu ul li:hover a {
@@ -60,7 +60,7 @@ h1 {
     width: 100%;
     background: #f9f9f9;
     height: 94px;
-    border-bottom: 1px solid #f15556;
+    border-bottom: 1px solid #830300;
     position: fixed;
     top: 0;
     z-index: 5000;
@@ -92,7 +92,7 @@ h1 {
 #templatemo_banner_menu ul li a.current
 {
     background-position: 0 0px ;
-    background-color: #f15556;
+    background-color: #830300;
     color: #ffffff;
 }
 #templatemo_banner_menu #mobile_menu {
@@ -221,7 +221,7 @@ h1 {
     position: absolute;
 }
 #templatemo_about .pre_next a {
-    color: #6698b5;
+    color: #00111B;
     float: left;
 }
 #templatemo_about .pre_next a:hover {
@@ -237,7 +237,7 @@ h1 {
 }
 /*events*/
 #templatemo_events {
-    background: #6698b5;
+    background: #00111B;
     float: left;
     overflow: hidden;
 }
@@ -293,7 +293,7 @@ h1 {
     display: none;
 }
 #templatemo_timeline .time_line_caption {
-    background: #f15556;
+    background: #830300;
     padding: 10px 20px 10px 20px ;
     border-radius: 5px;
     height: 40px;
@@ -366,7 +366,7 @@ h1 {
 }
 /*contact*/
 #templatemo_contact {
-    background: #6698b5;
+    background: #00111B;
     float: left;
 }
 #templatemo_contact h1 {
@@ -426,9 +426,9 @@ h1 {
 /*templatemo_footer*/
 #templatemo_footer {
     width: 100%;
-    border-top: 2px solid #507f9a;
+    border-top: 2px solid #FFFFFF;
     height: 70px;
-    background: #447693;
+    background: #830300;
     float: left;
 }
 #templatemo_footer p {
